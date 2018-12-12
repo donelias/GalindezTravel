@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//admin
+Route::delete('admin/roles', 'Admin\\RolesController@index')
+	->name('roles.index')
+    ->middleware('permission:roles.index');
