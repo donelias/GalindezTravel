@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'GalindezTravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -168,6 +168,7 @@ return [
         Styde\Html\HtmlServiceProvider::class,
         Caffeinated\Shinobi\ShinobiServiceProvider::class,
 
+
         /*
          * Application Service Providers...
          */
@@ -225,6 +226,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
 
     ],
 
