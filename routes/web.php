@@ -23,3 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::delete('admin/roles', 'Admin\\RolesController@index')
 	->name('roles.index')
     ->middleware('permission:roles.index');
+
+//Posts
+Route::get('admin/posts/create', 'PostController@create')->name('posts.create');
+Route::post('admin/posts/create', 'PostController@store')->name('posts.store');
