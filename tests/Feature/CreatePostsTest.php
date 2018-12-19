@@ -49,5 +49,16 @@ class CreatePostsTest extends TestCase
 
 
 
+    public function test_creating_a_post_requires_authentication()
+    {
+
+        // When
+        $this->get(route('posts.create'))
+            ->assertRedirect(route('login'));
+
+    }
+
+
+
 
 }
