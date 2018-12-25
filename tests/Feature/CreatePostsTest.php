@@ -60,5 +60,22 @@ class CreatePostsTest extends TestCase
 
 
 
+    public function  test_create_post_form_validation()
+    {
+
+
+
+
+        $this->actingAs($this->defaultUser())
+            ->get(route('posts.create'))
+            ->assertSeeTextInOrder('Publicar')
+            ->assertRedirect(route('posts.create'))
+            ->assertSeeInOrder('#field_title', 'El campo titulo es obligatorio')
+            ->assertSeeInOrder('#file_content', 'El campo contenido es obligatorio');
+
+    }
+
+
+
 
 }

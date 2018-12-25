@@ -1,0 +1,25 @@
+{
+    "fields": [
+        {
+            "name": "statu",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "user",
+            "type": "hasMany",
+            "class": "App\\User"
+        },
+        {
+            "name": "post",
+            "type": "hasMany",
+            "class": "App\\Post"
+        },
+        {
+            "name": "solicitud",
+            "type": "hasMany",
+            "class": "App\\Solicitud"
+        }
+    ]
+}

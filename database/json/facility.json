@@ -1,0 +1,15 @@
+{
+    "fields": [
+        {
+            "name": "facility",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "detail_facility",
+            "type": "hasMany",
+            "class": "App\\FacilityDatal"
+        }
+    ]
+}

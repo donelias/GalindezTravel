@@ -1,0 +1,58 @@
+{
+    "fields": [
+        {
+            "name": "identity",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "last_name",
+            "type": "string"
+        },
+        {
+            "name": "phone_nomber",
+            "type": "string"
+        },
+        {
+            "name": "cellphone",
+            "type": "string"
+        },
+        {
+            "name": "id_direccion_habitacion",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "id_direccion_origen",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "email",
+            "type": "string"
+        }
+
+    ],
+    "foreign_keys": [
+        {
+            "column": "direccion_habitacion_id",
+            "references": "id",
+            "on": "states",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "direccion_origen_id",
+            "references": "id",
+            "on": "states",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "states",
+            "type": "belongsTo",
+            "class": "App\\States"
+        }
+    ]
+}

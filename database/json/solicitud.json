@@ -1,0 +1,75 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "last_name",
+            "type": "string"
+        },
+        {
+            "name": "email",
+            "type": "string"
+        },
+        {
+            "name": "cell_phone",
+            "type": "string"
+        },
+        {
+            "name": "chech_in",
+            "type": "date"
+        },
+        {
+            "name": "chech_out",
+            "type": "date"
+        },
+        {
+            "name": "adult",
+            "type": "string"
+        },
+        {
+            "name": "children",
+            "type": "text"
+        },
+        {
+            "name": "room",
+            "type": "string"
+        },
+        {
+            "name": "post_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "hotel_id",
+            "type": "integer#unsigned"
+        }
+
+    ],
+    "foreign_keys": [
+        {
+            "column": "post_id",
+            "references": "id",
+            "on": "posts",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "hotel_id",
+            "references": "id",
+            "on": "hotels",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "post",
+            "type": "belongsTo",
+            "class": "App\\Post"
+        },
+        {
+            "name": "hotel",
+            "type": "belongsTo",
+            "class": "App\\Hotel"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "fields": [
+        {
+            "name": "type_room",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "detail_facility",
+            "type": "hasMany",
+            "class": "App\\FacilityDatal"
+        },
+        {
+            "name": "price_room",
+            "type": "hasMany",
+            "class": "App\\PriceRoom"
+        }
+    ]
+}

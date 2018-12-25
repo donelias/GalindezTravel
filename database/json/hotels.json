@@ -1,0 +1,100 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "category_service_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "hotel_type_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "facility",
+            "type": "text"
+        },
+        {
+            "name": "plan_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "distance_beach",
+            "type": "text"
+        },
+        {
+            "name": "chech_in",
+            "type": "time"
+        },
+        {
+            "name": "chech_out",
+            "type": "time"
+        },
+        {
+            "name": "year_construction",
+            "type": "date"
+        },
+        {
+            "name": "number_room",
+            "type": "string"
+        },
+        {
+            "name": "rooms",
+            "type": "text"
+        },
+        {
+            "name": "ubication_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "category_service_id",
+            "references": "id",
+            "on": "category_services",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "hotel_type_id",
+            "references": "id",
+            "on": "type_hotels",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "plan_id",
+            "references": "id",
+            "on": "plans",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "ubication_id",
+            "references": "id",
+            "on": "ubications",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "category_service",
+            "type": "belongsTo",
+            "class": "App\\CategoryService"
+        },
+        {
+            "name": "type_hotel",
+            "type": "belongsTo",
+            "class": "App\\TypeHotel"
+        },
+        {
+            "name": "ubication",
+            "type": "belongsTo",
+            "class": "App\\Ubication"
+        },
+        {
+            "name": "plan",
+            "type": "belongsTo",
+            "class": "App\\Plan"
+        }
+    ]
+}

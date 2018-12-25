@@ -1,0 +1,15 @@
+{
+    "fields": [
+        {
+            "name": "type",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "post",
+            "type": "hasMany",
+            "class": "App\\Post"
+        }
+    ]
+}

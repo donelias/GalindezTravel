@@ -8,40 +8,49 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class CreatePostsTest extends DuskTestCase
 {
+
+
     /**
-     * A Dusk test example.
      *
-     * @return void
      */
-    public function testExample()
-    {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                    ->assertSee('Laravel');
-        });
-    }
-
-
     public function test_a_user_create_a_post()
     {
+
         // Having
-        $title = 'Esta es una pregunta';
+        $title = 'Este es el Titulo';
         $content = 'Este es el contenido';
+        $this->actingAs($user = $this->defaultUser());
 
 
         // When
-        $this->browse(function (Browser $browser) use ($title, $content) {
-            $browser->visit(route('posts.create'))
-                ->type('title', $title)
-                ->type('content', $content )
-                ->press('Publicar');
-                //->assertSee($title);
-        });
-
+        $this->post(route('posts.create'))
+            ->assertSee($title, 'title')
+            ->assertSee($content, 'content')
+            ->assertSee('Publicar');
 
 
         // Then
+       $response = $this->assertDatabaseMissing('posts', [
+            'title' => $title,
+            'content' => $content,
+            'pending' => true,
+            'user_id' => $user->id,
+        ]);
 
+
+
+        // Test a user is redirected to the posts details after creating it.
+        //$response->asserSee($title);
+    }
+
+
+
+    public function test_creating_a_post_requires_authentication()
+    {
+
+        // When
+        $this->get(route('posts.create'))
+            ->assertRedirect(route('login'));
 
     }
 }

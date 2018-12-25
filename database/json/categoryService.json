@@ -1,0 +1,15 @@
+{
+    "fields": [
+        {
+            "name": "category_service",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "post",
+            "type": "hasMany",
+            "class": "App\\Post"
+        }
+    ]
+}

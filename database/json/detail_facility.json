@@ -1,0 +1,68 @@
+{
+    "fields": [
+        {
+            "name": "facility_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "hotel_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "plan_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "type_room_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "facility_id",
+            "references": "id",
+            "on": "facilities",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "hotel_id",
+            "references": "id",
+            "on": "hotels",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "plan_id",
+            "references": "id",
+            "on": "plans",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "type_room_id",
+            "references": "id",
+            "on": "type_rooms",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "facility",
+            "type": "belongsTo",
+            "class": "App\\Facility"
+        },
+        {
+            "name": "hotel",
+            "type": "belongsTo",
+            "class": "App\\Hotel"
+        },
+        {
+            "name": "type_room_id",
+            "type": "belongsTo",
+            "class": "App\\TypeRoom"
+        },
+        {
+            "name": "plan",
+            "type": "belongsTo",
+            "class": "App\\Plan"
+        }
+    ]
+}

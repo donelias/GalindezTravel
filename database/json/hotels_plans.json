@@ -1,0 +1,38 @@
+{
+    "fields": [
+        {
+            "name": "hotel_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "plan_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "hotel_id",
+            "references": "id",
+            "on": "hotels",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "plan_id",
+            "references": "id",
+            "on": "plans",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "hotel",
+            "type": "belongsTo",
+            "class": "App\\Hotel"
+        },
+        {
+            "name": "plan_id",
+            "type": "belongsTo",
+            "class": "App\\Plan"
+        }
+    ]
+}

@@ -14,13 +14,13 @@
 
                             {!! Field::textarea('content') !!}
 
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        Publicar
-                                    </button>
-                                </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Publicar') }}
+                                </button>
                             </div>
+                        </div>
                         {!! Form::close() !!}
                     </div>
                 </div>

@@ -1,0 +1,15 @@
+{
+    "fields": [
+        {
+            "name": "ubication",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "post",
+            "type": "hasMany",
+            "class": "App\\Post"
+        }
+    ]
+}

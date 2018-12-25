@@ -1,0 +1,15 @@
+{
+    "fields": [
+        {
+            "name": "category",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "user",
+            "type": "hasMany",
+            "class": "App\\Post"
+        }
+    ]
+}

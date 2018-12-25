@@ -1,0 +1,61 @@
+{
+    "fields": [
+        {
+            "name": "hotel_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "type_room_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "statu_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "expiration_date",
+            "type": "date"
+        },
+        {
+            "name": "price",
+            "type": "decimal"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "hotel_id",
+            "references": "id",
+            "on": "hotels",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "type_room_id",
+            "references": "id",
+            "on": "type_rooms",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "statu_id",
+            "references": "id",
+            "on": "status",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "hotel",
+            "type": "belongsTo",
+            "class": "App\\Hotel"
+        },
+        {
+            "name": "type_room_id",
+            "type": "belongsTo",
+            "class": "App\\TypeRoom"
+        },
+        {
+            "name": "statu",
+            "type": "belongsTo",
+            "class": "App\\Statu"
+        }
+    ]
+}
