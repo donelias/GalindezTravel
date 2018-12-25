@@ -167,6 +167,7 @@ return [
          */
         Styde\Html\HtmlServiceProvider::class,
         Caffeinated\Shinobi\ShinobiServiceProvider::class,
+        \Laravel\Dusk\DuskServiceProvider::class,
 
 
 
