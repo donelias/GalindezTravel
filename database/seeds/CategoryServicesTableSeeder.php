@@ -13,49 +13,49 @@ class CategoryServicesTableSeeder extends Seeder
     {
         DB::table('category_services')->insert($data = array(
             [
-                'category_service'=> 'Una Estrella',
+                'name'=> 'Una Estrella',
                 'slug' => 'una_estrella',
                 'description' => 'Categoria 1 Estrella',
                 'created_at'=> new DateTime,
                 'updated_at'=> new DateTime
             ],
             [
-                'category_service'=> 'Dos Estrellas',
+                'name'=> 'Dos Estrellas',
                 'slug' => 'dos_estrellas',
                 'description' => 'Categoria 2 Estrellas',
                 'created_at'=> new DateTime,
                 'updated_at'=> new DateTime
             ],
             [
-                'category_service'=> 'Tres Estrellas',
+                'name'=> 'Tres Estrellas',
                 'slug' => 'tres_estrellas',
                 'description' => 'Categoria 3 Estrellas',
                 'created_at'=> new DateTime,
                 'updated_at'=> new DateTime
             ],
             [
-                'category_service'=> 'Cuatro Estrellas',
+                'name'=> 'Cuatro Estrellas',
                 'slug' => 'cuatro_estrellas',
                 'description' => 'Categoria 4 Estrellas',
                 'created_at'=> new DateTime,
                 'updated_at'=> new DateTime
             ],
             [
-                'category_service'=> 'Cinco Estrellas',
+                'name'=> 'Cinco Estrellas',
                 'slug' => 'cinco_estrellas',
                 'description' => 'Categoria 1 Estrellas',
                 'created_at'=> new DateTime,
                 'updated_at'=> new DateTime
             ],
             [
-                'category_service'=> 'Economico',
+                'name'=> 'Economico',
                 'slug' => 'economico',
                 'description' => 'Categoria economica',
                 'created_at'=> new DateTime,
                 'updated_at'=> new DateTime
             ],
             [
-                'category_service'=> 'Negocios',
+                'name'=> 'Negocios',
                 'slug' => 'negocios',
                 'description' => 'Categoria negocios',
                 'created_at'=> new DateTime,

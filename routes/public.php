@@ -11,9 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//store
+Route::get('/', 'Store\\StoreController@index')->name('index');
+Route::get('/about', 'Store\\StoreController@about')->name('about');
+Route::get('/hotels', 'Store\\StoreController@hotels')->name('hotels');
+Route::get('/tours', 'Store\\StoreController@tours')->name('tours');
+Route::get('/flight', 'Store\\StoreController@flight')->name('flight');
+Route::get('/contact', 'Store\\StoreController@contact')->name('contact');
+
+
 
 Auth::routes();
 

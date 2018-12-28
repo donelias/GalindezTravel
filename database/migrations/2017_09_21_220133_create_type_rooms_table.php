@@ -12,13 +12,13 @@ class CreateTypeRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_rooms', function(Blueprint $table) {
+        /*Schema::create('type_rooms', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('slug', 100)->unique();
+            $table->string('slug', 100)->unique()->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
-        });
+        });*/
     }
 
     /**
@@ -28,6 +28,6 @@ class CreateTypeRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('type_rooms');
+        //Schema::drop('type_rooms');
     }
 }

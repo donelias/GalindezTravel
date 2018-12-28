@@ -10,14 +10,14 @@
 
                         {!! Form::open(['method' => 'POST', 'route' => 'posts.store']) !!}
 
-                            {!! Field::text('title') !!}
+                        {!! Field::text('title') !!}
 
-                            {!! Field::textarea('content') !!}
+                        {!! Field::textarea('content') !!}
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Publicar') }}
+                                    Publicar
                                 </button>
                             </div>
                         </div>

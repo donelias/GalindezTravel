@@ -63,9 +63,6 @@ class CreatePostsTest extends TestCase
     public function  test_create_post_form_validation()
     {
 
-
-
-
         $this->actingAs($this->defaultUser())
             ->get(route('posts.create'))
             ->assertSeeTextInOrder('Publicar')

@@ -21,8 +21,8 @@ class CreateCompaniesTable extends Migration
             $table->integer('type_services_id')->unsigned();
             $table->foreign('type_services_id')->references('id')->on('types_services')->onUpdate('cascade');
             $table->text('distance_beach')->nullable();
-            $table->time('chech_in')->nullable();
-            $table->time('chech_out')->nullable();
+            $table->time('check_in')->nullable();
+            $table->time('check_out')->nullable();
             $table->string('number_room')->nullable();
             $table->text('ubication_map')->nullable();
             $table->integer('city_id')->unsigned();

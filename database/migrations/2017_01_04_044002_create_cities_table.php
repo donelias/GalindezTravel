@@ -14,10 +14,10 @@ class CreateCitiesTable extends Migration
     {
         Schema::create('cities', function(Blueprint $table) {
             $table->increments('id');
+            $table->string('code')->unique();
             $table->string('city');
-            $table->string('slug', 100)->unique();
-            $table->integer('state_id')->unsigned();
-            $table->foreign('state_id')->references('id')->on('states');
+            $table->integer('country_id')->unsigned();
+            $table->foreign('country_id')->references('id')->on('countries');
             $table->timestamps();
         });
     }

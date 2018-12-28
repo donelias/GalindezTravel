@@ -40,7 +40,7 @@ class CreatePostsTest extends DuskTestCase
 
 
         // Test a user is redirected to the posts details after creating it.
-        //$response->asserSee($title);
+        //$response->assertSee($title);
     }
 
 
@@ -52,5 +52,23 @@ class CreatePostsTest extends DuskTestCase
         $this->get(route('posts.create'))
             ->assertRedirect(route('login'));
 
+    }
+
+
+
+    public function test_create_post_form_validation()
+    {
+        /*$this->actingAs($this->defaultUser())
+            ->visit(route('posts.create'))
+            ->press('Publicar')
+            ->seePageIs(route('posts.create'))
+            ->seeInElement('#field_title.has-error .help-block', 'El campo título es obligatorio')
+            ->seeInElement('#field_content.has-error .help-block', 'El campo contenido es obligatorio');*/
+
+        $this->browse(function ($browser) {
+            $browser->visit(route('posts.create'))
+                ->press('Publicar')
+                ->assertPathIs(route('posts.create'));
+        });
     }
 }
