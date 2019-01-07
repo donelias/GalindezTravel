@@ -1,0 +1,23 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "slug",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "post",
+            "type": "hasMany",
+            "class": "App\\Post"
+        }
+    ]
+}

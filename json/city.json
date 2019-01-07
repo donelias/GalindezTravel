@@ -1,0 +1,41 @@
+{
+    "fields": [
+        {
+            "name": "code",
+            "type": "string"
+        },
+        {
+            "name": "city",
+            "type": "text"
+        },
+        {
+            "name": "country_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "country_id",
+            "references": "id",
+            "on": "countries",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "country",
+            "type": "belongsTo",
+            "class": "App\\Country"
+        }
+    ],
+    "validations": [
+        {
+            "field": "code",
+            "rules": "required|max:10"
+        },
+        {
+            "field": "code",
+            "rules": "required|max:50"
+        }
+    ]
+}

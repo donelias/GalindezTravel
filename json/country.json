@@ -1,0 +1,71 @@
+{
+    "fields": [
+        {
+            "name": "code",
+            "type": "string"
+        },
+        {
+            "name": "country",
+            "type": "string"
+        },
+        {
+            "name": "continent_country",
+            "type": "string"
+        },
+        {
+            "name": "country_region",
+            "type": "string"
+        },
+        {
+            "name": "country_area",
+            "type": "string"
+        },
+        {
+            "name": "country_independence",
+            "type": "string"
+        },
+        {
+            "name": "country_population",
+            "type": "string"
+        },
+        {
+            "name": "country_life_expectancy",
+            "type": "string"
+        },
+        {
+            "name": "PaisProductoInternoBruto",
+            "type": "string"
+        },
+        {
+            "name": "PaisProductoInternoBrutoAntiguo",
+            "type": "string"
+        },
+        {
+            "name": "PaisNombreLocal",
+            "type": "string"
+        },
+        {
+            "name": "PaisGobierno",
+            "type": "string"
+        },
+        {
+            "name": "PaisJefeDeEstado",
+            "type": "string"
+        },
+        {
+            "name": "PaisCapital",
+            "type": "string"
+        },
+        {
+            "name": "PaisCodigo2",
+            "type": "string"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "country",
+            "type": "hasMany",
+            "class": "App\\Country"
+        }
+    ]
+}

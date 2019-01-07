@@ -80,26 +80,26 @@
     </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap js-fullheight" style="background-image: @if(Route::Is('index')) url('store/images/bg_1.jpg'); @elseif(Route::Is('about')) url('store/images/bg_2.jpg'); @elseif(Route::Is('contact')) url('store/images/bg_10.jpg'); @elseif(Route::Is('tours')) url('store/images/bg_33.jpg'); @elseif(Route::Is('hotels')) url('store/images/bg_55.jpg'); @elseif(Route::Is('flight')) url('store/images/bg_22.jpg'); @endif">
+    <div class="hero-wrap js-fullheight" style="background-image: @if(Route::Is('index')) url('{{ asset("store/images/bg_1.jpg")}}'); @elseif(Route::Is('room-detail')) url('{{ asset("store/images/hotel-room.jpg")}}'); @elseif(Route::Is('about')) url('store/images/bg_2.jpg'); @elseif(Route::Is('contact')) url('store/images/bg_10.jpg'); @elseif(Route::Is('tours')) url('store/images/bg_33.jpg'); @elseif(Route::Is('hotels')) url('store/images/bg_55.jpg'); @elseif(Route::Is('flight')) url('store/images/bg_22.jpg'); @else url('{{ asset("store/images/bg_55.jpg")}}'); @endif {{--   @elseif(Route::Is('p_single')) url('store/images/bg_2.jpg');  @endif--}}">
         <div class="overlay"></div>
         <div class="container">
             @if(Route::Is('index'))
-            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+                <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
                 <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                     <br>
                     <br>
-                    <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong> <br></strong> <strong> Explore</strong> your amazing city</h1>
-                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Find great places to stay, eat, shop, or visit from local experts</p>
+                    <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong> <br></strong> <strong> Explore</strong> Su increíble ciudad</h1>
+                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Encontrar grandes lugares para alojarse, comer, ir de compras o de visita de expertos locales</p>
                     <div class="block-17 my-4">
                         <form action="" method="post" class="d-block d-flex">
                             <div class="fields d-block d-flex">
                                 <div class="textfield-search one-third">
-                                    <input type="text" class="form-control" placeholder="Ex: food, service, hotel">
+                                    <input type="text" class="form-control" placeholder="Ej: comida, servicio, hotel">
                                 </div>
                                 <div class="select-wrap one-third">
                                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                                        <option value="">Where</option>
+                                    <select name="" id="" class="form-control" placeholder="Búsqueda por palabra clave">
+                                        <option value="">Lugar</option>
                                         <option value="">San Francisco USA</option>
                                         <option value="">Berlin Germany</option>
                                         <option value="">Lodon United Kingdom</option>
@@ -107,18 +107,85 @@
                                     </select>
                                 </div>
                             </div>
-                            <input type="submit" class="search-submit btn btn-primary" value="Search">
+                            <input type="submit" class="search-submit btn btn-primary" value="Buscar">
                         </form>
                     </div>
-                    <p>Or browse the highlights</p>
+                    <p>O navegar por los más destacados</p>
                     <p class="browse d-md-flex">
-                        <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-fork"></i>Restaurant</a></span>
-                        <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-hotel"></i>Hotel</a></span>
-                        <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-meeting-point"></i>Places</a></span>
-                        <span class="d-flex justify-content-md-center align-items-md-	center"><a href="#"><i class="flaticon-shopping-bag"></i>Shopping</a></span>
+                        <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="fa fa icon-plane"></i>Vuelos</a></span>
+                        <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-fork"></i>Restaurantes</a></span>
+                        <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-hotel"></i>Hoteles</a></span>
+                        <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-meeting-point"></i>Tours</a></span>
+                        <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-meeting-point"></i>Lugares</a></span>
+                        <span class="d-flex justify-content-md-center align-items-md-	center"><a href="#"><i class="flaticon-shopping-bag"></i>Compras</a></span>
                     </p>
                 </div>
             </div>
+            @endif
+            @if(Route::Is('flight'))
+                <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+                        <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <br>
+                            <br>
+                            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong> <br></strong> <strong> Explore</strong> Su increíble Vuelo</h1>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Encontrar los vuelos con las mejores tarifas del mercado.</p>
+                        </div>
+                    </div>
+            @endif
+            @if(Route::Is('tours'))
+                <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+                        <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <br>
+                            <br>
+                            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong> <br></strong> <strong> Explore</strong> Su increíble Tour</h1>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Encontrar grandes lugares para alojarse, comer, ir de compras o de visita de expertos locales</p>
+
+                        </div>
+                    </div>
+            @endif
+            @if(Route::Is('hotels'))
+                <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+                        <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <br>
+                            <br>
+                            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong> <br></strong> <strong> Los mejores</strong> hoteles con increibles tarifas</h1>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Encontrar grandes lugares para alojarse, comer, ir de compras o de visita de expertos locales</p>
+
+                        </div>
+                    </div>
+            @endif
+            @if(Route::Is('about'))
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+                        <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <br>
+                            <br>
+                            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong> <br></strong> <strong> Conoce</strong> más acerca de nossotros</h1>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"></p>
+
+                        </div>
+                    </div>
+            @endif
+            @if(Route::Is('p_single'))
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+                        <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <br>
+                            <br>
+                            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong> <br></strong> <strong> Detalles </strong> del servio o paquete turistico</h1>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"></p>
+
+                        </div>
+                    </div>
+            @endif
+            @if(Route::Is('room-detail'))
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+                        <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <br>
+                            <br>
+                            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong> <br></strong> <strong> Detalles </strong> de la habitacion</h1>
+                            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"></p>
+
+                        </div>
+                    </div>
             @endif
         </div>
     </div>

@@ -19,6 +19,9 @@ Route::get('/tours', 'Store\\StoreController@tours')->name('tours');
 Route::get('/flight', 'Store\\StoreController@flight')->name('flight');
 Route::get('/contact', 'Store\\StoreController@contact')->name('contact');
 
+Route::get('/p-single/{slug}', 'Store\\StoreController@pSingle')->name('p_single');
+Route::get('/room/details/{slug}', 'Store\\StoreController@roomDetails')->name('room-detail');
+
 
 
 Auth::routes();
